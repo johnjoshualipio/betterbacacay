@@ -21,7 +21,7 @@
                 <x-civic.icon name="search" size="18" />
             </a>
             <x-civic.cta href="{{ route('tourism') }}" icon="compass" class="civic-navbar__explore">
-                Explore Bacacay
+                Explore
             </x-civic.cta>
         </div>
 

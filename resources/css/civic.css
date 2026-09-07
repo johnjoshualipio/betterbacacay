@@ -36,7 +36,7 @@ img{display:block;max-width:100%}
 .civic-page-hero{position:relative;min-height:560px;overflow:hidden;background:linear-gradient(111deg,#fff 0%,#fff 34%,rgba(237,247,250,.25) 57%,rgba(213,239,245,.8) 100%)}
 .civic-page-hero:before{position:absolute;inset:0 0 auto auto;width:68%;height:100%;background:linear-gradient(90deg,#fff 0%,transparent 26%),linear-gradient(180deg,rgba(255,255,255,.12),transparent 50%);content:'';pointer-events:none;z-index:1}
 .civic-page-hero__grid{position:static;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(480px,1.1fr);align-items:center;min-height:560px}
-.civic-page-hero__copy{position:relative;z-index:3;max-width:630px;padding:120px 0 92px}
+.civic-page-hero__copy{position:relative;z-index:3;max-width:630px;padding:220px 0 92px}
 .civic-eyebrow{margin:0 0 13px;color:var(--civic-ocean);font-size:11px;font-weight:800;letter-spacing:.31em;text-transform:uppercase}
 .civic-page-hero h1{max-width:650px;margin:0;font-size:clamp(45px,5.3vw,76px);font-weight:750;letter-spacing:-.065em;line-height:.97}
 .civic-page-hero h1 strong,.civic-page-hero h1 em{color:var(--civic-teal);font-style:normal}
@@ -180,7 +180,7 @@ html{scroll-behavior:auto}
 .civic-mobile-menu{position:relative;display:block}
 .civic-page-hero{min-height:620px}
 .civic-page-hero__grid{display:block;min-height:620px}
-.civic-page-hero__copy{padding:118px 0 240px}
+.civic-page-hero__copy{padding:134px 0 240px}
 .civic-page-hero h1{font-size:clamp(43px,13vw,64px)}
 .civic-page-hero__description{font-size:17px}
 .civic-page-hero__visual{top:auto;right:-70px;bottom:50px;left:-70px;width:auto;height:280px}
