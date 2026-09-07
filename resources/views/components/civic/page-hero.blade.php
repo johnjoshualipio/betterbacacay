@@ -30,7 +30,6 @@
         @if ($image)
             <div class="civic-page-hero__visual">
                 <img src="{{ asset(ltrim($image, '/')) }}" alt="{{ $imageAlt }}" fetchpriority="high">
-                <span class="civic-page-hero__glow" aria-hidden="true"></span>
             </div>
         @endif
     </div>
