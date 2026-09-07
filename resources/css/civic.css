@@ -149,7 +149,18 @@ textarea.civic-input{min-height:130px;resize:vertical}
 .civic-footer__links{display:grid;gap:9px}
 .civic-footer__links a{width:fit-content;color:#d1edf0;font-size:13px}
 .civic-footer__links a:hover{color:var(--civic-gold)}
-.civic-footer__script{color:white!important;font-family:var(--font-script);font-size:28px!important;line-height:1.15!important}
+.civic-footer__support{display:flex;flex-direction:column;align-items:flex-start}
+.civic-footer__support-cost-row{display:flex;align-items:center;gap:9px;white-space:nowrap}
+.civic-footer__support-label{margin:0!important;color:rgba(255,255,255,.8)!important;font-size:12px!important;line-height:1.4!important}
+.civic-footer__support-cost{margin:0!important;border-radius:9px;background:rgba(14,143,163,.17);padding:9px 12px;color:rgba(255,255,255,.85)!important;font-size:13px!important}
+.civic-footer__support-cost strong{color:var(--civic-gold);font-size:16px}
+.civic-footer__support-links{display:flex;flex-direction:column;align-items:flex-start;gap:11px;margin-top:19px}
+.civic-footer__support-link{display:inline-flex!important;align-items:center;gap:9px;border-radius:9999px;background:rgba(255,255,255,.06);padding:9px 11px;color:rgba(255,255,255,.8)!important;font-size:12px!important;line-height:1.2!important;white-space:nowrap}
+.civic-footer__support-link .civic-icon{color:var(--civic-aqua)}
+.civic-footer__support-link:hover{background:rgba(14,143,163,.2);color:white!important}
+.civic-footer__bettergov{display:inline-flex;margin-top:29px;opacity:.72;transition:opacity .2s ease}
+.civic-footer__bettergov:hover{opacity:1}
+.civic-footer__bettergov img{display:block;width:88px;height:88px;object-fit:contain;object-position:left center}
 .civic-footer__bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.19);padding:15px 0 21px;color:#acd9df;font-size:11px}
 .civic-mobile-menu{display:none;margin-left:auto}
 .civic-mobile-menu summary{display:grid;width:42px;height:42px;cursor:pointer;place-content:center;gap:4px;list-style:none}
@@ -206,7 +217,8 @@ html{scroll-behavior:auto}
 .civic-newsletter input{width:100%}
 .civic-form-grid{grid-template-columns:1fr}
 .civic-footer__content{grid-template-columns:1fr 1fr;gap:28px 18px}
-.civic-footer__brand,.civic-footer__note{grid-column:1/-1}
+.civic-footer__brand,.civic-footer__support{grid-column:1/-1}
+.civic-footer__support-links{flex-direction:row;flex-wrap:wrap}
 .civic-footer__bottom{display:grid;gap:5px}
 .civic-footer{margin-top:60px}
 .civic-footer .civic-wave{top:-60px}
