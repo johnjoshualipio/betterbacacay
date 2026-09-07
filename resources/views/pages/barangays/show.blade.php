@@ -7,6 +7,7 @@
             <div class="civic-intro-grid__copy">
                 <p class="civic-eyebrow">Community information</p>
                 <h2>{{ $barangay['name'] }} deserves a useful profile.</h2>
+                <p><strong>{{ number_format($barangay['population']) }}</strong> residents in the 2024 POPCEN · <strong>{{ $barangay['classification'] }}</strong> classification in the PSA PSGC.</p>
                 <p>{{ $barangay['description'] }}</p>
                 <x-civic.empty-state href="{{ route('contact') }}" title="Profile being compiled" description="We are verifying local facilities, contacts, services, and community links before publishing them." />
             </div>

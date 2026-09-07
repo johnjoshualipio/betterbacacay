@@ -14,4 +14,16 @@
             <x-civic.source-meta :last-verified="$site['verified_on']" />
         </div>
     </section>
+    <section class="civic-section civic-section--mist">
+        <div class="civic-container civic-intro-grid">
+            <div class="civic-intro-grid__copy">
+                <p class="civic-eyebrow">A useful local starting point</p>
+                <h2>Public service information should be <span style="color:var(--civic-teal)">easy to verify.</span></h2>
+                <p>The Bacacay Water District publishes an agency profile, services, citizen charter, and contact starting point. It is a helpful example of the kind of official source BetterBacacay will link to as more local service records become available.</p>
+                <x-civic.cta href="{{ route('directory') }}" variant="outline" icon="building">Open the office directory</x-civic.cta>
+            </div>
+            <div class="civic-art-frame"><img src="{{ asset(ltrim($site['images']['community'], '/')) }}" alt="Concept artwork of a Bacacay public-service community" loading="lazy"></div>
+        </div>
+        <div class="civic-container"><x-civic.source-meta :sources="['bacacay_water', 'bettergov']" :last-verified="$site['verified_on']" label="Service references" /></div>
+    </section>
 </x-civic.layout>

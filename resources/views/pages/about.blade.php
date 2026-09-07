@@ -14,6 +14,17 @@
             <div class="civic-art-frame"><img src="{{ asset(ltrim($site['images']['community'], '/')) }}" alt="Concept artwork of Bacacay homes beside the sea" loading="lazy"></div>
         </div>
     </section>
+    <section class="civic-section">
+        <div class="civic-container">
+            <x-civic.section-heading eyebrow="Bacacay in brief" title="A municipality shaped by coast and connection" description="The public record gives us a useful starting point, while local profiles still need community review." />
+            <div class="civic-feature-grid">
+                <x-civic.card title="56 barangays" description="The PSA PSGC lists 56 barangays as of 31 July 2025, with urban or rural classifications and 2024 population counts." icon="people" />
+                <x-civic.card title="72,298 people" description="The latest population figure shown on the PSA municipality profile is from the 2024 POPCEN." icon="people" />
+                <x-civic.card title="A coastal gateway" description="The Province of Albay places Bacacay in the East Coast tourism circuit, linking beaches, islands, waterways, and mountain experiences." icon="waves" />
+            </div>
+            <x-civic.source-meta :sources="['psa_barangays', 'albay_tourism']" :last-verified="$site['verified_on']" label="Municipal profile references" />
+        </div>
+    </section>
     <section class="civic-section civic-section--mist">
         <div class="civic-container">
             <x-civic.section-heading eyebrow="What we stand for" title="A stronger community starts with trust" description="The portal is designed around clarity, independence, and participation." />

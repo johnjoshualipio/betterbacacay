@@ -8,7 +8,7 @@ uses(RefreshDatabase::class);
 it('renders every public page', function (): void {
     foreach ([
         route('home'), route('about'), route('services'), route('barangays'), route('transparency'),
-        route('tourism'), route('news'), route('directory'), route('emergency'), route('contact'), route('search'),
+        route('tourism'), route('news'), route('directory'), route('emergency'), route('contact'), route('sources'), route('search'),
     ] as $url) {
         $this->get($url)->assertOk();
     }
@@ -33,7 +33,7 @@ it('returns not found for unknown records', function (): void {
 it('renders the complete barangay directory and source metadata', function (): void {
     $response = $this->get(route('barangays'));
 
-    $response->assertOk()->assertSee('56 barangays')->assertSee('PSA PSGC: Bacacay barangays')->assertSee('Last verified: 2026-09-06');
+    $response->assertOk()->assertSee('56 barangays')->assertSee('PSA PSGC: Municipality of Bacacay')->assertSee('Last verified: 2026-09-07');
     $response->assertSee('Baclayon')->assertSee('Vinisitahan-Napao');
 });
 
@@ -42,6 +42,14 @@ it('shows the independent project disclaimer', function (): void {
         ->assertOk()
         ->assertSee('independent civic information project', false)
         ->assertSee('does not create government cases', false);
+});
+
+it('renders the source and credit page', function (): void {
+    $this->get(route('sources'))
+        ->assertOk()
+        ->assertSee('Sources and Credits')
+        ->assertSee('Philippine Statistics Authority')
+        ->assertSee('Concept artwork generated for BetterBacacay');
 });
 
 it('supports search results and an empty state', function (): void {

@@ -10,6 +10,7 @@
                     <x-civic.card :title="$article['title']" :description="$article['summary']" :category="$article['category']" :meta="date('M j, Y', strtotime($article['published_at']))" :image="$site['images'][$article['image']]" :href="route('news.show', $article['slug'])" :status="$article['status']" />
                 @endforeach
             </div>
+            <x-civic.source-meta :sources="['psa_barangays', 'dilg_bacacay', 'karagumoy']" :last-verified="$site['verified_on']" label="Story references" />
         </div>
     </section>
 </x-civic.layout>

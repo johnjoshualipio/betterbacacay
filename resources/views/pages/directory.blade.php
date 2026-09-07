@@ -16,6 +16,7 @@
                             @if ($office['phone'])<p><strong>Phone:</strong> {{ $office['phone'] }}</p>@endif
                             @if ($office['email'])<p><strong>Email:</strong> <a href="mailto:{{ $office['email'] }}">{{ $office['email'] }}</a></p>@endif
                             @if ($office['status'] === 'needs_verification')<span class="civic-status">Details being verified</span>@endif
+                            @if (!empty($office['sources']))<x-civic.source-meta :sources="$office['sources']" :last-verified="$office['last_verified']" label="Office reference" />@endif
                         </div>
                     </article>
                 @endforeach

@@ -108,6 +108,11 @@ class PortalController extends Controller
         return response()->view('pages.contact', $this->siteData() + ['contact' => config('civic.contact', [])]);
     }
 
+    public function sources(): Response
+    {
+        return response()->view('pages.sources', $this->siteData() + ['sources' => config('civic.sources', [])]);
+    }
+
     public function search(Request $request): Response
     {
         $query = trim((string) $request->string('q'));
@@ -145,7 +150,7 @@ class PortalController extends Controller
     {
         $urls = [
             route('home'), route('about'), route('services'), route('barangays'), route('transparency'),
-            route('tourism'), route('news'), route('directory'), route('emergency'), route('contact'), route('search'),
+            route('tourism'), route('news'), route('directory'), route('emergency'), route('contact'), route('sources'), route('search'),
         ];
 
         foreach (['services' => 'services.show', 'barangays' => 'barangays.show', 'destinations' => 'tourism.show', 'news' => 'news.show'] as $key => $routeName) {

@@ -61,6 +61,21 @@
                     </div>
                 @endforeach
             </div>
+            <x-civic.source-meta :sources="['psa_barangays', 'albay_tourism', 'bacacay_water']" :last-verified="$site['verified_on']" label="Profile references" />
+        </div>
+    </section>
+
+    <section class="civic-section">
+        <div class="civic-container civic-intro-grid">
+            <div class="civic-intro-grid__copy">
+                <p class="civic-eyebrow">A place with a point of view</p>
+                <h2>Coast, islands, and <span style="color:var(--civic-teal)">community.</span></h2>
+                <p>Bacacay is a first-class municipality in Albay with 56 barangays and a 2024 population of 72,298 in the PSA geographic profile. Its public tourism story connects black-sand shores, Cagraray, Sula Channel, mountain views, and karagumoy craft.</p>
+                <x-civic.cta href="{{ route('sources') }}" variant="outline" icon="document">See the references</x-civic.cta>
+            </div>
+            <div class="civic-art-frame">
+                <img src="{{ asset(ltrim($site['images']['community'], '/')) }}" alt="Concept artwork of a Bacacay coastal community" loading="lazy">
+            </div>
         </div>
     </section>
 

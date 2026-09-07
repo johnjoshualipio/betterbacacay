@@ -4,6 +4,7 @@
     </x-civic.page-hero>
     <section class="civic-section">
         <div class="civic-container">
+            @if ($section['description'])<p class="civic-lead">{{ $section['description'] }}</p>@endif
             @if (count($section['records']))
                 <div class="civic-resource-grid">@foreach ($section['records'] as $record)<x-civic.card :title="$record['title']" :description="$record['summary']" icon="document" />@endforeach</div>
             @else

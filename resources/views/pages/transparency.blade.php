@@ -9,9 +9,10 @@
             <div class="civic-section-heading" style="margin-top:42px"><div><p class="civic-eyebrow">Public records</p><div class="civic-section-heading__title-row"><h2>What we are compiling</h2><span class="civic-rule"></span></div><p>Each section will link directly to a verified source when one is available.</p></div></div>
             <div class="civic-feature-grid">
                 @foreach ($sections as $key => $item)
-                    <x-civic.card :title="$item['title']" :description="$item['summary']" icon="document" :href="route('transparency.section', $key)" status="needs_verification" />
+                    <x-civic.card :title="$item['title']" :description="$item['summary']" icon="document" :href="route('transparency.section', $key)" :status="$item['status'] === 'needs_verification' ? 'needs_verification' : null" />
                 @endforeach
             </div>
+            <x-civic.source-meta :sources="['dilg_directory', 'dilg_bacacay', 'bacacay_water']" :last-verified="$site['verified_on']" label="Transparency references" />
         </div>
     </section>
 </x-civic.layout>

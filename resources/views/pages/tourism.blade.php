@@ -1,5 +1,5 @@
-<x-civic.layout title="Tourism | BetterBacacay" description="Discover Bacacay's islands, culture, and coastal experiences." :image="$site['images']['island']">
-    <x-civic.page-hero eyebrow="Islands · Culture · Unforgettable experiences" title="Discover <strong>Bacacay.</strong>" description="Explore coastal landscapes, living craft traditions, and local experiences with care for the communities and places that make Bacacay home." :image="$site['images']['island']" image-alt="Concept artwork of an island aerial view">
+<x-civic.layout title="Tourism | BetterBacacay" description="Discover Bacacay's islands, coast, caves, culture, and community-rooted experiences." :image="$site['images']['island']">
+    <x-civic.page-hero eyebrow="Islands · Culture · Unforgettable experiences" title="Discover <strong>Bacacay.</strong>" description="Explore a coast connected to Cagraray, Sula Channel, island destinations, caves, mountain views, and karagumoy craft—with current access and safety details confirmed locally." :image="$site['images']['island']" image-alt="Concept artwork of an island aerial view">
         <x-civic.cta href="#destinations" icon="island">Plan your visit</x-civic.cta>
         <x-civic.cta href="{{ route('contact') }}" variant="outline" icon="message">Ask for a source</x-civic.cta>
     </x-civic.page-hero>
@@ -11,7 +11,7 @@
                     <x-civic.card :title="$destination['title']" :description="$destination['summary']" :category="$destination['category']" :image="$site['images'][$destination['image']]" :href="route('tourism.show', $destination['slug'])" :status="$destination['status']" />
                 @endforeach
             </div>
-            <x-civic.source-meta :last-verified="$site['verified_on']" />
+            <x-civic.source-meta :sources="['albay_tourism', 'albay_tourist_spots', 'albay_adventure']" :last-verified="$site['verified_on']" label="Tourism references" />
         </div>
     </section>
     <section class="civic-section civic-section--mist">
@@ -35,6 +35,17 @@
                 <x-civic.cta href="{{ route('tourism.show', 'karagumoy-weaving') }}" variant="outline" icon="weave">Learn about karagumoy</x-civic.cta>
                 <x-civic.source-meta :sources="$culture['sources']" :last-verified="$culture['last_verified']" />
             </div>
+        </div>
+    </section>
+    <section class="civic-section civic-section--mist">
+        <div class="civic-container">
+            <x-civic.section-heading eyebrow="Culture with context" title="Karagumoy is more than a souvenir" description="The craft is connected to local skill, livelihood, and place. Learn respectfully and keep the people behind the work visible." />
+            <div class="civic-feature-grid">
+                @foreach ($culture['points'] as $point)
+                    <x-civic.card :title="$point['title']" :description="$point['description']" :icon="$point['icon']" />
+                @endforeach
+            </div>
+            <x-civic.source-meta :sources="$culture['sources']" :last-verified="$culture['last_verified']" label="Culture reference" />
         </div>
     </section>
 </x-civic.layout>

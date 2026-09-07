@@ -19,6 +19,7 @@ Route::get('/news/{article}', [PortalController::class, 'article'])->name('news.
 Route::get('/directory', [PortalController::class, 'directory'])->name('directory');
 Route::get('/emergency', [PortalController::class, 'emergency'])->name('emergency');
 Route::get('/contact', [PortalController::class, 'contact'])->name('contact');
+Route::get('/sources', [PortalController::class, 'sources'])->name('sources');
 Route::get('/search', [PortalController::class, 'search'])->name('search');
 Route::get('/sitemap.xml', [PortalController::class, 'sitemap'])->name('sitemap');
 

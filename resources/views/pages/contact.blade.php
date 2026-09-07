@@ -2,6 +2,7 @@
     <x-civic.page-hero eyebrow="Participation · Corrections · Questions" title="Help make this guide <strong>better.</strong>" description="Send the maintainers a question, correction, broken link, or official source to review." :image="$site['images']['community']" image-alt="Concept artwork of a coastal community">
         <x-civic.cta href="#send-message" icon="message">Send a message</x-civic.cta>
         <x-civic.cta href="{{ route('directory') }}" variant="outline" icon="building">Browse directory</x-civic.cta>
+        <x-civic.cta href="{{ route('sources') }}" variant="outline" icon="document">View sources</x-civic.cta>
     </x-civic.page-hero>
     <section id="send-message" class="civic-section">
         <div class="civic-container civic-intro-grid">

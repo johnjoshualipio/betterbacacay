@@ -25,6 +25,7 @@
                 <a href="{{ route('directory') }}">Office directory</a>
                 <a href="{{ route('transparency') }}">Transparency</a>
                 <a href="{{ route('emergency') }}">Emergency contacts</a>
+                <a href="{{ route('sources') }}">Sources &amp; credits</a>
                 <a href="{{ config('civic.sources.bettergov.url') }}" target="_blank" rel="noreferrer">BetterGov.ph <span aria-hidden="true">↗</span></a>
                 <a href="{{ route('sitemap') }}">Sitemap</a>
             </div>
@@ -38,6 +39,7 @@
                 <a href="{{ route('contact') }}" class="civic-footer__support-link"><x-civic.icon name="mail" size="16" /> Volunteer with us</a>
                 <a href="https://github.com/johnjoshualipio/betterbacacay" class="civic-footer__support-link" target="_blank" rel="noreferrer noopener"><x-civic.icon name="arrow-up-right" size="16" /> Contribute code with us</a>
             </div>
+            <p class="civic-footer__mission">{{ config('civic.image_credit') }}</p>
             <a href="{{ config('civic.sources.bettergov.url') }}" class="civic-footer__bettergov" target="_blank" rel="noreferrer noopener" aria-label="Visit BetterGov.ph">
                 <img src="{{ asset('images/bettergov-footer.svg') }}" alt="BetterGov.ph" width="1080" height="1080" loading="lazy">
             </a>

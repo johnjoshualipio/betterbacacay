@@ -13,6 +13,15 @@
                     </article>
                 @endforeach
             </div>
+            <div style="margin-top:42px">
+                <x-civic.section-heading eyebrow="Official preparedness links" title="Check before you travel or respond" description="Weather and hazard information can change quickly. Use these official sources for current conditions." />
+                <div class="civic-resource-grid">
+                    @foreach ($site['emergency_resources'] ?? [] as $resource)
+                        @php($source = config('civic.sources.' . $resource['source']))
+                        <x-civic.card :title="$resource['title']" :description="$resource['description']" icon="shield" :href="$source['url']" />
+                    @endforeach
+                </div>
+            </div>
             <x-civic.empty-state href="{{ route('contact') }}" title="Local contacts being verified" description="We are checking local emergency, health, and disaster-response contact details before publishing them." />
         </div>
     </section>
