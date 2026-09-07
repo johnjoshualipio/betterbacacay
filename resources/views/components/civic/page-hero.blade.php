@@ -5,7 +5,13 @@
     'image' => null,
     'imageAlt' => '',
     'align' => 'left',
+    'location' => null,
+    'locationRegion' => 'Bacacay, Albay',
 ])
+
+@php
+    $locationLabel = $location ?? (str_ends_with((string) $image, 'island-aerial.png') ? 'Cagraray Island' : 'Bacacay Coast');
+@endphp
 
 <section @class(['civic-page-hero', 'civic-page-hero--center' => $align === 'center'])>
     <div class="civic-container civic-page-hero__grid">
@@ -28,5 +34,13 @@
             </div>
         @endif
     </div>
+    @if ($image && $locationLabel)
+        <div class="civic-container civic-page-hero__location" aria-label="Hero image location">
+            <div class="civic-page-hero__location-copy">
+                <span class="civic-page-hero__location-name">{{ $locationLabel }}</span>
+                <span class="civic-page-hero__location-region">{{ $locationRegion }}</span>
+            </div>
+        </div>
+    @endif
     <x-civic.wave variant="hero" />
 </section>

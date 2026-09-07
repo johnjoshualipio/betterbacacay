@@ -46,6 +46,10 @@ img{display:block;max-width:100%}
 .civic-page-hero__visual img{width:100%;height:100%;object-fit:cover;object-position:center}
 .civic-page-hero__visual:after{position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.92) 17%,rgba(255,255,255,.46) 34%,transparent 52%),linear-gradient(0deg,rgba(7,93,115,.2),transparent 50%);content:''}
 .civic-page-hero__glow{position:absolute;right:16%;bottom:23%;z-index:2;width:90px;height:90px;border:2px solid rgba(255,255,255,.75);border-radius:50%;opacity:.7}
+.civic-page-hero__location{position:absolute;right:0;bottom:54px;left:0;z-index:4;display:flex;justify-content:flex-end;pointer-events:none}
+.civic-page-hero__location-copy{display:grid;justify-items:end;gap:5px;color:white;text-align:right;text-shadow:0 2px 14px rgba(7,22,44,.45);transform:rotate(-6deg);transform-origin:right bottom}
+.civic-page-hero__location-name{font-family:var(--font-script);font-size:clamp(28px,2.8vw,38px);font-weight:500;letter-spacing:.01em;line-height:1}
+.civic-page-hero__location-region{padding-right:13px;font-size:9px;font-weight:800;letter-spacing:.32em;text-transform:uppercase}
 .civic-wave{position:absolute;right:0;bottom:-1px;left:0;z-index:3;height:110px;pointer-events:none}
 .civic-wave svg{display:block;width:100%;height:100%}
 .civic-wave__back{fill:rgba(237,247,250,.94)}
@@ -196,6 +200,7 @@ html{scroll-behavior:auto}
 .civic-page-hero__description{font-size:17px}
 .civic-page-hero__visual{top:auto;right:-70px;bottom:50px;left:-70px;width:auto;height:280px}
 .civic-page-hero__visual:after{background:linear-gradient(180deg,#fbfdfe 0%,transparent 31%),linear-gradient(90deg,rgba(255,255,255,.3),transparent)}
+.civic-page-hero__location{bottom:14px}
 .civic-wave{height:70px}
 .civic-section{padding:46px 0}
 .civic-section-heading{display:block}
