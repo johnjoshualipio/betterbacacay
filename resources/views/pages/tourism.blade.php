@@ -1,5 +1,5 @@
 <x-civic.layout title="Tourism | BetterBacacay" description="Discover Bacacay's islands, coast, caves, culture, and community-rooted experiences." :image="$site['images']['island']">
-    <x-civic.page-hero eyebrow="Islands · Culture · Unforgettable experiences" title="Discover <strong>Bacacay.</strong>" description="Explore a coast connected to Cagraray, Sula Channel, island destinations, caves, mountain views, and karagumoy craft—with current access and safety details confirmed locally." :image="$site['images']['island']" image-alt="Concept artwork of an island aerial view">
+    <x-civic.page-hero eyebrow="Islands · Culture · Unforgettable experiences" title="Discover <strong>Bacacay.</strong>" description="Explore the coast, Cagraray, Sula Channel, island destinations, caves, mountain views, and karagumoy craft. Confirm current access and safety details locally before visiting." :image="$site['images']['island']" image-alt="Concept artwork of an island aerial view">
         <x-civic.cta href="#destinations" icon="island">Plan your visit</x-civic.cta>
         <x-civic.cta href="{{ route('contact') }}" variant="outline" icon="message">Ask for a source</x-civic.cta>
     </x-civic.page-hero>

@@ -280,7 +280,7 @@ return [
             'slug' => 'mataas-caves-and-beaches',
             'title' => 'Mataas Caves and Beaches',
             'summary' => 'A nature and adventure area named by the Province of Albay in Mataas, Bacacay.',
-            'description' => 'Provincial adventure material includes Mataas Caves and Beaches in a Cagraray–Batan island circuit, while the tourist-spot guide describes a forest trek and cave exploration. Treat this as a high-risk outdoor activity and seek current local guidance.',
+            'description' => 'Provincial adventure material includes Mataas Caves and Beaches in an island circuit linking Cagraray and Batan, while the tourist-spot guide describes a forest trek and cave exploration. Treat this as a high-risk outdoor activity and seek current local guidance.',
             'category' => 'Adventure',
             'icon' => 'spark',
             'image' => 'community',

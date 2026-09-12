@@ -1,5 +1,5 @@
 <x-civic.layout title="Your community guide to Bacacay" :description="$site['tagline']" :image="$site['images']['hero']">
-    <x-civic.page-hero title="Your community<br>guide to <strong>Bacacay.</strong>" description="Local information, government services, tourism destinations, and community resources — all in one place for a more connected, informed, and empowered Bacacay." :image="$site['images']['hero']" image-alt="Concept artwork of Bacacay's coast and islands">
+    <x-civic.page-hero title="Your community<br>guide to <strong>Bacacay.</strong>" description="Find local information, government services, tourism destinations, and community resources in one place. Stay connected, informed, and empowered in Bacacay." :image="$site['images']['hero']" image-alt="Concept artwork of Bacacay's coast and islands">
         <x-civic.cta href="{{ route('tourism') }}" icon="compass">Explore Bacacay</x-civic.cta>
         <x-civic.cta href="{{ route('services') }}" variant="outline" icon="document">View government services</x-civic.cta>
     </x-civic.page-hero>
@@ -14,7 +14,7 @@
 
     <section class="civic-section">
         <div class="civic-container">
-            <x-civic.section-heading eyebrow="Featured" title="Highlights from Bacacay" description="Explore what makes our town home — from community stories to island destinations." :link="route('news')" link-label="View all news" />
+            <x-civic.section-heading eyebrow="Featured" title="Highlights from Bacacay" description="Explore stories from our town and nearby island destinations." :link="route('news')" link-label="View all news" />
             <div class="civic-feature-grid">
                 @foreach ($highlights as $highlight)
                     <x-civic.card :title="$highlight['title']" :description="$highlight['summary']" :category="$highlight['category']" :meta="date('M j, Y', strtotime($highlight['published_at']))" :image="$site['images'][$highlight['image']]" :href="route('news.show', $highlight['slug'])" :status="$highlight['status']" />
