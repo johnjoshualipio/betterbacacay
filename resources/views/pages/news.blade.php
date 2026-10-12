@@ -1,4 +1,4 @@
-<x-civic.layout title="News | BetterBacacay" description="Community news, announcements, and stories from Bacacay." :image="$site['images']['community']">
+<x-civic.layout title="News" description="Community news, announcements, and stories from Bacacay." :image="$site['images']['community']">
     <x-civic.page-hero eyebrow="News · Community · Participation" title="Stay updated with <strong>Bacacay.</strong>" description="Read carefully sourced stories, announcements, and community notes that help people stay informed and connected." :image="$site['images']['community']" image-alt="Concept artwork of Bacacay's coastline">
         <x-civic.cta href="{{ route('contact') }}" icon="mail">Share an update</x-civic.cta>
     </x-civic.page-hero>

@@ -1,4 +1,4 @@
-<x-civic.layout title="Emergency Contacts | BetterBacacay" description="Emergency contact information for Bacacay.">
+<x-civic.layout title="Emergency Contacts" description="Emergency contact information for Bacacay.">
     <x-civic.page-hero eyebrow="Safety · Preparedness · Urgent help" title="When help is <strong>urgent.</strong>" description="Use the national emergency hotline for immediate danger. Local contact details will be added after official verification." :image="$site['images']['hero']" image-alt="Concept artwork of Bacacay's coast">
         <x-civic.cta href="tel:911" icon="alert">Call 911</x-civic.cta>
     </x-civic.page-hero>

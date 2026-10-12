@@ -101,7 +101,11 @@
                 @csrf
                 <input type="hidden" name="type" value="newsletter">
                 <input type="hidden" name="page_url" value="{{ url()->current() }}">
-                <input class="civic-input" type="email" name="email" value="{{ old('email') }}" placeholder="Your email address" aria-label="Email address" required>
+                <div class="civic-form-field">
+                    <label class="civic-sr-only" for="newsletter-email">Email address</label>
+                    <input class="civic-input" id="newsletter-email" type="email" name="email" value="{{ old('email') }}" placeholder="Your email address" autocomplete="email" @error('email') aria-invalid="true" aria-describedby="newsletter-email-error" @enderror required>
+                    @error('email')<p class="civic-form-error" id="newsletter-email-error">{{ $message }}</p>@enderror
+                </div>
                 <input class="civic-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <button class="civic-cta civic-cta--primary" type="submit">Subscribe <x-civic.icon name="arrow-right" size="18" /></button>
             </form>

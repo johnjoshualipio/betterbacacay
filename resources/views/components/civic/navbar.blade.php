@@ -10,7 +10,7 @@
 
         <nav class="civic-navbar__links" aria-label="Primary navigation">
             @foreach ($navigation as $item)
-                <a href="{{ route($item['route']) }}" @class(['is-active' => request()->routeIs($item['active'])])>
+                <a href="{{ route($item['route']) }}" @if (request()->routeIs($item['active'])) aria-current="page" @endif @class(['is-active' => request()->routeIs($item['active'])])>
                     {{ $item['label'] }}
                 </a>
             @endforeach
@@ -26,12 +26,12 @@
         </div>
 
         <details class="civic-mobile-menu">
-            <summary aria-label="Open navigation menu">
+            <summary aria-label="Navigation menu">
                 <span></span><span></span><span></span>
             </summary>
             <nav aria-label="Mobile navigation">
                 @foreach ($navigation as $item)
-                    <a href="{{ route($item['route']) }}" @class(['is-active' => request()->routeIs($item['active'])])>
+                    <a href="{{ route($item['route']) }}" @if (request()->routeIs($item['active'])) aria-current="page" @endif @class(['is-active' => request()->routeIs($item['active'])])>
                         {{ $item['label'] }}
                     </a>
                 @endforeach

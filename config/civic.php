@@ -82,11 +82,11 @@ return [
     'verified_on' => $verifiedOn,
     'independence' => 'BetterBacacay is an independent civic information project. It is not an official LGU website and does not create government cases or transactions.',
     'images' => [
-        'hero' => '/images/betterbacacay/hero-coast.png',
-        'island' => '/images/betterbacacay/island-aerial.png',
-        'weave' => '/images/betterbacacay/karagumoy-weave.png',
-        'festival' => '/images/betterbacacay/festival-concept.png',
-        'community' => '/images/betterbacacay/community-coast.png',
+        'hero' => '/images/betterbacacay/hero-coast.webp',
+        'island' => '/images/betterbacacay/island-aerial.webp',
+        'weave' => '/images/betterbacacay/karagumoy-weave.webp',
+        'festival' => '/images/betterbacacay/festival-concept.webp',
+        'community' => '/images/betterbacacay/community-coast.webp',
     ],
     'image_credit' => 'Concept artwork generated for BetterBacacay. These visuals are decorative and are not documentary evidence.',
     'navigation' => [

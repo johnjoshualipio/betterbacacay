@@ -1,4 +1,4 @@
-<x-civic.layout title="Sources and Credits | BetterBacacay" description="Research references, official links, and visual credits for BetterBacacay.">
+<x-civic.layout title="Sources and Credits" description="Research references, official links, and visual credits for BetterBacacay.">
     <x-civic.page-hero eyebrow="References · Credits · Accountability" title="Follow the <strong>source trail.</strong>" description="BetterBacacay is an independent guide. These links show where the factual content comes from and where to verify details before relying on them." :image="$site['images']['community']" image-alt="Concept artwork of a Bacacay coastal community">
         <x-civic.cta href="{{ route('about') }}" variant="outline" icon="arrow-right">About this project</x-civic.cta>
     </x-civic.page-hero>

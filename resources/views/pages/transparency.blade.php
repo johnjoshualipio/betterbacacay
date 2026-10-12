@@ -1,4 +1,4 @@
-<x-civic.layout title="Transparency | BetterBacacay" description="Source-aware public information and transparency links for Bacacay.">
+<x-civic.layout title="Transparency" description="Source-aware public information and transparency links for Bacacay.">
     <x-civic.page-hero eyebrow="Open information · Accountability · Trust" title="A clearer view of <strong>public information.</strong>" description="Transparency starts with accessible records, clear sources, and honest status labels." :image="$site['images']['community']" image-alt="Concept artwork of Bacacay's community">
         <x-civic.cta href="{{ route('directory') }}" icon="building">Browse office directory</x-civic.cta>
         <x-civic.cta href="{{ route('contact') }}" variant="outline" icon="message">Suggest a record</x-civic.cta>

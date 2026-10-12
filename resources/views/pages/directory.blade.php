@@ -1,4 +1,4 @@
-<x-civic.layout title="Office Directory | BetterBacacay" description="Find public office starting points and contact information.">
+<x-civic.layout title="Office Directory" description="Find public office starting points and contact information.">
     <x-civic.page-hero eyebrow="People · Offices · Service" title="Find the right <strong>starting point.</strong>" description="Browse public office information for the next step. Contact details are shown only when sourced and verified." :image="$site['images']['community']" image-alt="Concept artwork of a coastal town">
         <x-civic.cta href="{{ route('emergency') }}" icon="alert">Emergency contacts</x-civic.cta>
     </x-civic.page-hero>

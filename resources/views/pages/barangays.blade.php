@@ -1,4 +1,4 @@
-<x-civic.layout title="Barangays | BetterBacacay" description="Browse the 56 barangays of Bacacay with PSA 2024 population and urban-rural reference data.">
+<x-civic.layout title="Barangays" description="Browse the 56 barangays of Bacacay with PSA 2024 population and urban-rural reference data.">
     <x-civic.page-hero eyebrow="People · Communities · Connection" title="Every barangay is <strong>part of Bacacay.</strong>" description="Browse all 56 barangays listed in the Philippine Standard Geographic Code, including 2024 population counts and urban-rural classification." :image="$site['images']['community']" image-alt="Concept artwork of a coastal Bacacay community">
         <x-civic.cta href="{{ route('contact') }}" variant="outline" icon="message">Suggest a source</x-civic.cta>
     </x-civic.page-hero>
@@ -19,7 +19,7 @@
                     @endforeach
                 </div>
             @else
-                <x-civic.empty-state title="No barangays matched that search" description="Try a shorter search or browse the complete directory." href="{{ route('barangays') }}" />
+                <x-civic.empty-state title="No barangays matched that search" description="Try a shorter search or browse the complete directory." href="{{ route('barangays') }}" link-label="Browse all barangays" />
             @endif
             <x-civic.source-meta sources="psa_barangays" :last-verified="$site['verified_on']" label="Directory source" />
         </div>

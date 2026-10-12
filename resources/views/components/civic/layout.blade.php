@@ -9,6 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ $title ? $title . ' | ' : '' }}{{ config('civic.name') }}</title>
     <meta name="theme-color" content="#075D73">
     <meta name="description" content="{{ $description ?? config('civic.tagline') }}">
     <link rel="canonical" href="{{ url()->current() }}">
@@ -30,7 +31,17 @@
     <a class="civic-skip-link" href="#main-content">Skip to content</a>
     <x-civic.emergency-bar />
     <x-civic.navbar />
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
+        @if ($errors->any())
+            <div class="civic-form-error-summary civic-container" role="alert">
+                <p>Please correct the following and submit again:</p>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         {{ $slot }}
     </main>
     <x-civic.footer />

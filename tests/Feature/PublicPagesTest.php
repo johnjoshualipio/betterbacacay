@@ -2,6 +2,7 @@
 
 use App\Models\Submission;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Str;
 
 uses(RefreshDatabase::class);
 
@@ -20,6 +21,20 @@ it('renders detail pages and active navigation state', function (): void {
     $this->get(route('tourism.show', 'karagumoy-weaving'))->assertOk();
     $this->get(route('news.show', 'karagumoy-livelihood'))->assertOk();
     $this->get(route('transparency.section', 'documents'))->assertOk();
+});
+
+it('renders every published detail page', function (): void {
+    foreach (['services' => 'services.show', 'barangays' => 'barangays.show', 'destinations' => 'tourism.show', 'news' => 'news.show'] as $key => $routeName) {
+        foreach (config('civic.'.$key, []) as $record) {
+            $slug = $record['slug'] ?? Str::slug($record['slug_source'] ?? $record['name'] ?? $record['title']);
+
+            $this->get(route($routeName, $slug))->assertOk();
+        }
+    }
+
+    foreach (array_keys(config('civic.transparency', [])) as $section) {
+        $this->get(route('transparency.section', $section))->assertOk();
+    }
 });
 
 it('returns not found for unknown records', function (): void {
@@ -117,4 +132,26 @@ it('renders the XML sitemap', function (): void {
         ->assertSee('<urlset', false)
         ->assertSee(route('home'), false)
         ->assertSee(route('barangays.show', 'banao'), false);
+});
+
+it('gives pages descriptive document titles and a focusable content destination', function (): void {
+    $this->get(route('search'))
+        ->assertSee('<title>Search | BetterBacacay</title>', false)
+        ->assertSee('id="main-content" tabindex="-1"', false);
+
+    $this->get('/services/no-such-service')
+        ->assertNotFound()
+        ->assertSee('<h1>That page is not here</h1>', false)
+        ->assertSee('Return home');
+});
+
+it('shows newsletter validation errors and preserves the submitted address', function (): void {
+    $this->followingRedirects()->from(route('home'))->post(route('submissions.store'), [
+        'type' => 'newsletter',
+        'email' => 'invalid-address',
+    ])
+        ->assertSee('Please correct the following and submit again:')
+        ->assertSee('value="invalid-address"', false)
+        ->assertSee('aria-describedby="newsletter-email-error"', false)
+        ->assertSee('The email field must be a valid email address.');
 });
