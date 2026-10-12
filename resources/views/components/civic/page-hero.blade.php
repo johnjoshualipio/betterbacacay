@@ -10,7 +10,7 @@
 ])
 
 @php
-    $locationLabel = $location ?? (str_ends_with((string) $image, 'island-aerial.png') ? 'Cagraray Island' : 'Bacacay Coast');
+    $locationLabel = $location ?? (str_ends_with((string) $image, 'island-aerial.webp') ? 'Cagraray Island' : 'Bacacay Coast');
 @endphp
 
 <section @class(['civic-page-hero', 'civic-page-hero--center' => $align === 'center'])>

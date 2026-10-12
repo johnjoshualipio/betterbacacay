@@ -1,4 +1,4 @@
-<x-civic.layout title="Services | BetterBacacay" description="Starting points for public services and local information.">
+<x-civic.layout title="Services" description="Starting points for public services and local information.">
     <x-civic.page-hero eyebrow="People · Services · A brighter tomorrow" title="Services that <strong>matter.</strong>" description="Find clear starting points for permits, health, social programs, preparedness, livelihoods, and more." :image="$site['images']['hero']" image-alt="Concept artwork of Bacacay's coastal community">
         <x-civic.cta href="{{ route('directory') }}" icon="building">Browse office directory</x-civic.cta>
         <x-civic.cta href="{{ route('contact') }}" variant="outline" icon="message">Ask a question</x-civic.cta>

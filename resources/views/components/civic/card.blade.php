@@ -28,13 +28,21 @@
         @if ($category && ! $image)
             <p class="civic-card__eyebrow">{{ $category }}</p>
         @endif
-        <h3 class="civic-card__title">
+        @if ($variant === 'quick')
+            <h2 class="civic-card__title">
+        @else
+            <h3 class="civic-card__title">
+        @endif
             @if ($href)
                 <a href="{{ $href }}">{{ $title }}</a>
             @else
                 {{ $title }}
             @endif
-        </h3>
+        @if ($variant === 'quick')
+            </h2>
+        @else
+            </h3>
+        @endif
         @if ($description)
             <p class="civic-card__description">{{ $description }}</p>
         @endif
